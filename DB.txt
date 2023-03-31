@@ -1,0 +1,12 @@
+DB Data;
+Table //sensors
+(Ultra sonic, Gyro, Temperature, ETC...);
+
+Values in Each Tables;
+A (
+    TIME TIMESTAMP,
+    ORDER INT,
+    DATA ***(NOT NULL),
+    PRIMARY KEY (ORDER)
+)
+
