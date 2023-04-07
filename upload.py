@@ -1,16 +1,9 @@
-import serial
-import pymysql
+import getserial
+import db
 
-ser = serial.Serial("COM3", 115200, timeout = 1)
-# con = pymysql.connect(host='localhost', user='mysql_user_id', password='_password_', db='Data', charset='utf8')
-
-# cur = con.cursor()
-
-data = ['gyro', 'ultsonic', 'temperature']
-order = None
-# sqlinsdata = "INSERT INTO A VALUES(NOW(), " + order + ", " + data + ");"
 while True:
-    if ser.readable():
-        orgdata = ser.readline()
-        print(orgdata)
-        
+    data = getserial.get()
+    print(data)
+    # db.input('ULTRA', data[0])
+    # db.input('GYRO', data[1])
+    # db.input('TEMPERATURE', data[2])
