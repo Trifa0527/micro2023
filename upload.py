@@ -1,9 +1,11 @@
 import getserial
 import db
 
+db[0] = input('host : ')
+db[1] = input('user : ')
+db[2] = input('password : ')
+
 while True:
-    data = getserial.get()
+    data = getserial.get()  # data[0] Ultra sonic sensor       data[1] Temperature sensor       data[2] Gyro sensor
     print(data)
-    # db.input('ULTRA', data[0])
-    # db.input('GYRO', data[1])
-    # db.input('TEMPERATURE', data[2])
+    # db.input(db, data)

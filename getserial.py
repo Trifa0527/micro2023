@@ -6,6 +6,6 @@ def get():
     if ser.readable():
         orgdata = ser.readline()
         data = orgdata.split('%%')
+        return data
     elif ser.readable() == 0:
         return 0
-    return data

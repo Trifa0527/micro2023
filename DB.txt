@@ -3,10 +3,10 @@ Table //sensors
 (Ultra sonic, Gyro, Temperature, ETC...);
 
 Values in Each Tables;
-A (
-    TIME TIMESTAMP,
-    ORDER INT,
-    DATA ***(NOT NULL),
-    PRIMARY KEY (ORDER)
-)
-
+'datas' (
+    'time' TIMESTAMP,
+    'order' INT(10) PRIMARY KEY AUTO_INCREAMENT,
+    'ultdata' char(10) NOT NULL,
+    'tmepdata' char(10) NOT NULL,
+    'gyrodata' char(15) NOT NULL
+);

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
     <meta charset="UTF-8">
     <title>Mr.Sensor's Data</title>
 </head>
@@ -8,5 +9,21 @@
     <h1>Today's temperature : 19.2°C</h1>
     <h1>Degree : 90°</h1>
     <h1>Distance from the Moon : 384000Km</h1>
+    <h1 id="dd"></h1>
+    <script>
+        function ajaxcall(){
+            $.ajax({
+                url : 'update',
+                type : 'GET',
+                datatype: 'json',
+                success: function(data){
+                    document.all('dd').innerHTML=data['dds'];
+                }
+            });
+        }
+        setInterval(ajaxcall, 1000);
+    </script>
+    {% autoescape off %}
+    {% endautoescape %}
 </body>
 </html>
