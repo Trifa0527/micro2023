@@ -1,15 +1,18 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-    <script type="text/javascript" src="/static/update.js"></script>
+    <script type="text/javascript" src="{% static 'update.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
     <meta charset="UTF-8">
-    <title>Mr.Sensor's Data</title>
+    <title id='title'>Mr.Sensor's Data</title>
 </head>
 <body>
     <h1 id="tem">Today's temperature : 00.0°C</h1>
     <h1 id="gyro">Rotate : 90°</h1>
-    <h1 id="ult">Distance from the Thing : 384000Km<br></h1>
+    <h1 id="ult">Distancing : 384000Km<br></h1>
+    <img id='img'>
     {% autoescape off %}
     {% endautoescape %}
 </body>

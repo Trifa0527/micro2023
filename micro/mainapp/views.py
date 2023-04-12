@@ -15,5 +15,5 @@ def index(request):
 def update(request):
     # da = getserial.get()
     da = [random.randrange(0,100), random.randrange(0,100), random.randrange(0,100)]
-    a = {'ult' : da[0], 'tem' : da[1], 'gyro' : da[0]}
+    a = {'ult' : da[0], 'tem' : da[1], 'gyro' : da[2]}
     return JsonResponse(a)
