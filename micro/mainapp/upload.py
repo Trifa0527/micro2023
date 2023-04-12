@@ -1,5 +1,5 @@
 import getserial
-import db
+import micro.mainapp.db as db
 
 db[0] = input('host : ')
 db[1] = input('user : ')

@@ -1,6 +1,7 @@
 from django.http import JsonResponse
 from django.shortcuts import render
 import random
+from . import getserial
 
 # Create your views here.
 def index(request):
@@ -12,5 +13,7 @@ def index(request):
     return render(request, 'mainapp/index.html', a)
 
 def update(request):
-    context={'dds': str(random.randrange(0,100))}
-    return JsonResponse(context)
+    # da = getserial.get()
+    da = [random.randrange(0,100), random.randrange(0,100), random.randrange(0,100)]
+    a = {'ult' : da[0], 'tem' : da[1], 'gyro' : da[0]}
+    return JsonResponse(a)
