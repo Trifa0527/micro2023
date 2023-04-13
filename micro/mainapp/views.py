@@ -1,7 +1,6 @@
 from django.http import JsonResponse
 from django.shortcuts import render
 import random
-from . import getserial
 
 # Create your views here.
 def index(request):
