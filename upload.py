@@ -11,6 +11,10 @@ if a == 'del':
         print("del error")
     else:
         print("del succes")
+elif a =='debug':
+    while True:
+        data = getserial.get()  # data[0] Ultra sonic sensor       data[1] Temperature sensor       data[2] Gyro sensor
+        print(data)
 else:
     while True:
         data = getserial.get()  # data[0] Ultra sonic sensor       data[1] Temperature sensor       data[2] Gyro sensor
