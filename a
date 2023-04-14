@@ -1,1 +1,0 @@
-sudo uwsgi --http :80 --home /home/ubuntu/myvenv/ --chdir /srv/micro2023/micro/ -w micro.wsgi --static-map=/static=/srv/micro2023/micro/staticfiles
