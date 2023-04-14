@@ -9,7 +9,7 @@ function ajaxcall(){
             var g = "Rotate : ";
             document.getElementById('ult').innerHTML=u+data['ult'] + 'cm';
             document.getElementById('tem').innerHTML=t+data['tem'] + '°C';
-            document.getElementById('gyro').innerHTML=g+ 'x: '+ data['gyro_x'] + '  y:' + '°';
+            document.getElementById('gyro').innerHTML=g+ 'x: '+ data['gyro_x'] + '  y:' + data['gyro_y'] +'°';
             Document.getElementById('ti').innerHTML=data['time']
             if(data['ult']>50){
                 document.getElementById('title').innerHTML='Elon';
