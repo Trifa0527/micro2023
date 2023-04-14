@@ -7,7 +7,7 @@ function ajaxcall(){
             var u = "Distance from the Thing : ";
             var t = "Today's temperature : ";
             var g = "Rotate : ";
-            var ran = Math.floor()*100
+            var ran = Math.floor(Math.random() * 101)
             document.getElementById('ult').innerHTML=u+data['ult'] + 'cm';
             document.getElementById('tem').innerHTML=t+data['tem'] + '°C';
             document.getElementById('gyro').innerHTML=g+ 'x: '+ data['gyro_x'] + '  y:' + data['gyro_y'] +'°';
